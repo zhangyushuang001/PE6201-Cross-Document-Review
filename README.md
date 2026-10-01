@@ -14,6 +14,81 @@ The predefined primary target is:
 - **High-severity issue recall >= 90%**
 - **Average false flags <= 1 per case**
 
+## Product documentation
+
+### Persona
+Primary user: an import/export operations executive in a trading SME who needs a
+pre-shipment review of Purchase Orders, Commercial Invoices and Packing Lists.
+
+### Inputs
+- Purchase Order
+- Commercial Invoice
+- Packing List
+- Supporting fields such as approval, insurance, SDS and temperature references
+- Simulated internal policy corpus
+
+### Outputs
+The review returns structured JSON containing:
+- detected issue type(s)
+- severity
+- supporting evidence
+- policy ID when policy grounding is used
+- final decision: `PASS` or `HUMAN_REVIEW`
+
+### High-level architecture
+
+```text
+Documents + Supporting Fields
+            |
+            v
++---------------------------+
+| Deterministic checks      |
+| for stable structured     |
+| comparisons and thresholds|
++---------------------------+
+            |
+            +------------------------------+
+            |                              |
+            v                              v
+ Observable-fact routing            Semantic retrieval
+            |                              |
+            +-------------+----------------+
+                          |
+                          v
+                 Top-5 relevant policies
+                          |
+                          v
+                    GPT-5.6 Luna
+                          |
+                          v
+         Structured issues + evidence + policy ID
+                          |
+                          v
+                PASS / HUMAN_REVIEW
+```
+
+The repository also contains three comparison arms: rule-only, direct-model and
+full-context. The RAG-hybrid arm is the retrieval-grounded model arm used to test
+whether relevant policy selection can preserve recall while reducing context.
+
+### Metrics targeted
+- High-severity issue recall **>= 90%**
+- Average false flags **<= 1 per case**
+- Secondary measures: overall issue precision/recall, decision accuracy,
+  policy grounding, input/output tokens, cost and latency
+
+### Metrics reached
+- RAG-hybrid DEV high-severity recall: **100%**
+- RAG-hybrid HOLDOUT high-severity recall: **100%**
+- RAG-hybrid HOLDOUT overall issue recall: **100%**
+- RAG-hybrid HOLDOUT precision: **90%**
+- RAG-hybrid HOLDOUT false flags per case: **0.167**
+- Direct-model missed the high-severity recall target on both DEV (**88.89%**)
+  and HOLDOUT (**85.71%**)
+
+See `data/README.md` for the dataset explanation and
+`results/README.md` for the evaluation protocol and metric definitions.
+
 ## Compared approaches
 
 1. **Rule-only** — deterministic checks for structured fields and explicit thresholds.
@@ -65,12 +140,14 @@ Key observations:
 │   ├── 01_formal_DEV_C01_C24.ipynb
 │   └── 02_formal_HOLDOUT_C25_C30.ipynb
 ├── data/
+│   ├── README.md
 │   ├── policies_final.json
 │   ├── cases_30_final.json
 │   ├── ground_truth_30_FROZEN.json
 │   ├── GROUND_TRUTH_FREEZE_RECORD.txt
 │   └── GENERATION_LOG.md
 └── results/
+    ├── README.md
     ├── formal_dev_summary.csv
     ├── formal_dev_*_details.csv
     ├── formal_dev_raw_results.json
