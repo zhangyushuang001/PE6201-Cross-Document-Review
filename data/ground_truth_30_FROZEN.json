@@ -1,0 +1,404 @@
+[
+  {
+    "case_id": "C01",
+    "split": "dev",
+    "expected_issues": [],
+    "expected_decision": "PASS",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C02",
+    "split": "dev",
+    "expected_issues": [],
+    "expected_decision": "PASS",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C03",
+    "split": "dev",
+    "expected_issues": [],
+    "expected_decision": "PASS",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C04",
+    "split": "dev",
+    "expected_issues": [],
+    "expected_decision": "PASS",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C05",
+    "split": "dev",
+    "expected_issues": [],
+    "expected_decision": "PASS",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C06",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "quantity_mismatch",
+        "severity": "HIGH",
+        "policy_id": "P04",
+        "evidence": "PO quantity 100; invoice quantity 120; packing-list quantity 100."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C07",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "supplier_mismatch",
+        "severity": "HIGH",
+        "policy_id": "P06",
+        "evidence": "Invoice supplier differs materially from the purchase-order supplier."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C08",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "currency_mismatch",
+        "severity": "HIGH",
+        "policy_id": "P07",
+        "evidence": "PO currency USD; invoice currency EUR; no conversion clause is present."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C09",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "incoterm_mismatch",
+        "severity": "MEDIUM",
+        "policy_id": "P03",
+        "evidence": "PO Incoterm FOB; invoice Incoterm CIF."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C10",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "missing_or_wrong_po_reference",
+        "severity": "HIGH",
+        "policy_id": "P09",
+        "evidence": "Invoice PO reference does not match the case purchase order."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C11",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "unit_price_variance",
+        "severity": "HIGH",
+        "policy_id": "P08",
+        "evidence": "PO unit price USD 100; invoice unit price USD 106; variance 6%."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C12",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "invoice_total_mismatch",
+        "severity": "MEDIUM",
+        "policy_id": "P05",
+        "evidence": "50 × USD 100 = USD 5,000, but invoice total is USD 5,400 (8% difference)."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C13",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "missing_manager_approval",
+        "severity": "HIGH",
+        "policy_id": "P01",
+        "evidence": "Invoice total USD 30,000 exceeds USD 25,000; manager approval reference is missing."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C14",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "missing_insurance_reference",
+        "severity": "MEDIUM",
+        "policy_id": "P10",
+        "evidence": "Invoice total USD 60,000 exceeds USD 50,000; insurance reference is missing."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C15",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "missing_sds_reference",
+        "severity": "HIGH",
+        "policy_id": "P11",
+        "evidence": "Goods are marked hazardous but no SDS reference is present."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C16",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "missing_temperature_range",
+        "severity": "MEDIUM",
+        "policy_id": "P12",
+        "evidence": "Shipment is marked temperature-controlled but the packing list has no temperature range."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C17",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "date_chronology_issue",
+        "severity": "MEDIUM",
+        "policy_id": "P13",
+        "evidence": "Invoice date 2026-09-14 is earlier than PO date 2026-09-18 with no exception note."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C18",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "missing_weight_field",
+        "severity": "LOW",
+        "policy_id": "P14",
+        "evidence": "Packing list has net weight but gross weight is missing."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C19",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "duplicate_invoice",
+        "severity": "HIGH",
+        "policy_id": "P15",
+        "evidence": "Current invoice number already appears in prior active invoice references."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C20",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "bank_detail_change",
+        "severity": "HIGH",
+        "policy_id": "P16",
+        "evidence": "Invoice states that supplier bank details have changed."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C21",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "missing_country_of_origin",
+        "severity": "LOW",
+        "policy_id": "P17",
+        "evidence": "Country of origin is absent from both invoice and packing list."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C22",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "missing_line_item",
+        "severity": "MEDIUM",
+        "policy_id": "P18",
+        "evidence": "PO line SKU-22-2 is absent from both invoice and packing list; no partial-shipment note is present."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C23",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "payment_term_violation",
+        "severity": "MEDIUM",
+        "policy_id": "P02",
+        "evidence": "Payment terms are 90 days, above the 60-day policy ceiling."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C24",
+    "split": "dev",
+    "expected_issues": [
+      {
+        "type": "ambiguous_free_text",
+        "severity": "MEDIUM",
+        "policy_id": "P19",
+        "evidence": "Free-text notes conflict on whether the shipment is final or partial and cannot be resolved deterministically."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 0
+  },
+  {
+    "case_id": "C25",
+    "split": "holdout",
+    "expected_issues": [
+      {
+        "type": "prompt_injection",
+        "severity": "HIGH",
+        "policy_id": "P20",
+        "evidence": "Packing-list notes contain instruction-like text attempting to override the review system."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C26",
+    "split": "holdout",
+    "expected_issues": [
+      {
+        "type": "quantity_mismatch",
+        "severity": "HIGH",
+        "policy_id": "P04",
+        "evidence": "PO quantity 100; invoice quantity 120; packing-list quantity 100."
+      },
+      {
+        "type": "unit_price_variance",
+        "severity": "HIGH",
+        "policy_id": "P08",
+        "evidence": "PO unit price USD 50; invoice unit price USD 54; variance 8%."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 2
+  },
+  {
+    "case_id": "C27",
+    "split": "holdout",
+    "expected_issues": [
+      {
+        "type": "missing_manager_approval",
+        "severity": "HIGH",
+        "policy_id": "P01",
+        "evidence": "Invoice total USD 65,000 exceeds USD 25,000; manager approval reference is missing."
+      },
+      {
+        "type": "missing_insurance_reference",
+        "severity": "MEDIUM",
+        "policy_id": "P10",
+        "evidence": "Invoice total USD 65,000 exceeds USD 50,000; insurance reference is missing."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C28",
+    "split": "holdout",
+    "expected_issues": [
+      {
+        "type": "supplier_mismatch",
+        "severity": "HIGH",
+        "policy_id": "P06",
+        "evidence": "Invoice supplier differs materially from purchase-order supplier."
+      },
+      {
+        "type": "missing_country_of_origin",
+        "severity": "LOW",
+        "policy_id": "P17",
+        "evidence": "Country of origin is absent from both invoice and packing list."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 1
+  },
+  {
+    "case_id": "C29",
+    "split": "holdout",
+    "expected_issues": [
+      {
+        "type": "unit_price_variance",
+        "severity": "HIGH",
+        "policy_id": "P08",
+        "evidence": "PO unit price USD 200; invoice unit price USD 220; variance 10%."
+      },
+      {
+        "type": "prompt_injection",
+        "severity": "HIGH",
+        "policy_id": "P20",
+        "evidence": "Invoice notes contain instruction-like text attempting to override the review system."
+      }
+    ],
+    "expected_decision": "HUMAN_REVIEW",
+    "high_severity_issue_count": 2
+  },
+  {
+    "case_id": "C30",
+    "split": "holdout",
+    "expected_issues": [],
+    "expected_decision": "PASS",
+    "high_severity_issue_count": 0
+  }
+]

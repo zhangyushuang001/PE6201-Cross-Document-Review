@@ -1,0 +1,2039 @@
+{
+  "model": "openai/gpt-5.6-luna",
+  "temperature": 0.0,
+  "top_k": 5,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "rule_only": [
+    {
+      "case_id": "C01",
+      "output": {
+        "case_id": "C01",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C02",
+      "output": {
+        "case_id": "C02",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C03",
+      "output": {
+        "case_id": "C03",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C04",
+      "output": {
+        "case_id": "C04",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C05",
+      "output": {
+        "case_id": "C05",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C06",
+      "output": {
+        "case_id": "C06",
+        "issues": [
+          {
+            "type": "quantity_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P04",
+            "evidence": "Quantities differ: [100, 120, 100]."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C07",
+      "output": {
+        "case_id": "C07",
+        "issues": [
+          {
+            "type": "supplier_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P06",
+            "evidence": "Supplier names differ."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C08",
+      "output": {
+        "case_id": "C08",
+        "issues": [
+          {
+            "type": "currency_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P07",
+            "evidence": "Currencies differ."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C09",
+      "output": {
+        "case_id": "C09",
+        "issues": [
+          {
+            "type": "incoterm_mismatch",
+            "severity": "MEDIUM",
+            "policy_id": "P03",
+            "evidence": "PO and invoice Incoterms differ."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C10",
+      "output": {
+        "case_id": "C10",
+        "issues": [
+          {
+            "type": "missing_or_wrong_po_reference",
+            "severity": "HIGH",
+            "policy_id": "P09",
+            "evidence": "Invoice PO reference does not match."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C11",
+      "output": {
+        "case_id": "C11",
+        "issues": [
+          {
+            "type": "unit_price_variance",
+            "severity": "HIGH",
+            "policy_id": "P08",
+            "evidence": "Unit-price variance exceeds 2%."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C12",
+      "output": {
+        "case_id": "C12",
+        "issues": [
+          {
+            "type": "invoice_total_mismatch",
+            "severity": "MEDIUM",
+            "policy_id": "P05",
+            "evidence": "Invoice arithmetic exceeds 1% tolerance."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C13",
+      "output": {
+        "case_id": "C13",
+        "issues": [
+          {
+            "type": "missing_manager_approval",
+            "severity": "HIGH",
+            "policy_id": "P01",
+            "evidence": "High-value invoice lacks manager approval."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C14",
+      "output": {
+        "case_id": "C14",
+        "issues": [
+          {
+            "type": "missing_insurance_reference",
+            "severity": "MEDIUM",
+            "policy_id": "P10",
+            "evidence": "Very high-value invoice lacks insurance reference."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C15",
+      "output": {
+        "case_id": "C15",
+        "issues": [
+          {
+            "type": "missing_sds_reference",
+            "severity": "HIGH",
+            "policy_id": "P11",
+            "evidence": "Hazardous goods lack SDS reference."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C16",
+      "output": {
+        "case_id": "C16",
+        "issues": [
+          {
+            "type": "missing_temperature_range",
+            "severity": "MEDIUM",
+            "policy_id": "P12",
+            "evidence": "Temperature-controlled shipment lacks temperature range."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C17",
+      "output": {
+        "case_id": "C17",
+        "issues": [
+          {
+            "type": "date_chronology_issue",
+            "severity": "MEDIUM",
+            "policy_id": "P13",
+            "evidence": "Invoice date precedes PO date."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C18",
+      "output": {
+        "case_id": "C18",
+        "issues": [
+          {
+            "type": "missing_weight_field",
+            "severity": "LOW",
+            "policy_id": "P14",
+            "evidence": "Packing-list weight field missing."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C19",
+      "output": {
+        "case_id": "C19",
+        "issues": [
+          {
+            "type": "duplicate_invoice",
+            "severity": "HIGH",
+            "policy_id": "P15",
+            "evidence": "Invoice number appears in prior active references."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C20",
+      "output": {
+        "case_id": "C20",
+        "issues": [
+          {
+            "type": "bank_detail_change",
+            "severity": "HIGH",
+            "policy_id": "P16",
+            "evidence": "Supplier bank-detail change is present."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C21",
+      "output": {
+        "case_id": "C21",
+        "issues": [
+          {
+            "type": "missing_country_of_origin",
+            "severity": "LOW",
+            "policy_id": "P17",
+            "evidence": "Country of origin absent."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C22",
+      "output": {
+        "case_id": "C22",
+        "issues": [
+          {
+            "type": "missing_line_item",
+            "severity": "MEDIUM",
+            "policy_id": "P18",
+            "evidence": "Line-item counts differ."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C23",
+      "output": {
+        "case_id": "C23",
+        "issues": [
+          {
+            "type": "payment_term_violation",
+            "severity": "MEDIUM",
+            "policy_id": "P02",
+            "evidence": "Payment terms are 90 days."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    },
+    {
+      "case_id": "C24",
+      "output": {
+        "case_id": "C24",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.541666666251331e-05,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0
+    }
+  ],
+  "direct_model": [
+    {
+      "case_id": "C01",
+      "output": {
+        "case_id": "C01",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 8.672735476999833,
+      "input_tokens": 724,
+      "output_tokens": 83,
+      "cost_usd": 0.00024440000000000003,
+      "raw_text": "{\"case_id\":\"C01\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C02",
+      "output": {
+        "case_id": "C02",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.7774798509999528,
+      "input_tokens": 722,
+      "output_tokens": 73,
+      "cost_usd": 0.000232,
+      "raw_text": "{\"case_id\":\"C02\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C03",
+      "output": {
+        "case_id": "C03",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.4988649259998965,
+      "input_tokens": 726,
+      "output_tokens": 75,
+      "cost_usd": 0.0002352,
+      "raw_text": "{\"case_id\":\"C03\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C04",
+      "output": {
+        "case_id": "C04",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.2002296620000834,
+      "input_tokens": 730,
+      "output_tokens": 61,
+      "cost_usd": 0.0002192,
+      "raw_text": "{\"case_id\":\"C04\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C05",
+      "output": {
+        "case_id": "C05",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.251137748000019,
+      "input_tokens": 733,
+      "output_tokens": 62,
+      "cost_usd": 0.000221,
+      "raw_text": "{\"case_id\":\"C05\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C06",
+      "output": {
+        "case_id": "C06",
+        "issues": [
+          {
+            "type": "quantity_mismatch",
+            "severity": "HIGH",
+            "evidence": "Commercial invoice lists 120 units of SKU-06-1, while the purchase order and packing list each list 100 units."
+          },
+          {
+            "type": "invoice_total_mismatch",
+            "severity": "HIGH",
+            "evidence": "Invoice total is USD 9,600 for 120 units, whereas the PO quantity and price imply USD 8,000 for 100 units."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.1488496330000544,
+      "input_tokens": 724,
+      "output_tokens": 261,
+      "cost_usd": 0.00045799999999999997,
+      "raw_text": "{\"case_id\":\"C06\",\"issues\":[{\"type\":\"quantity_mismatch\",\"severity\":\"HIGH\",\"evidence\":\"Commercial invoice lists 120 units of SKU-06-1, while the purchase order and packing list each list 100 units.\"},{\"type\":\"invoice_total_mismatch\",\"severity\":\"HIGH\",\"evidence\":\"Invoice total is USD 9,600 for 120 units, whereas the PO quantity and price imply USD 8,000 for 100 units.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C07",
+      "output": {
+        "case_id": "C07",
+        "issues": [
+          {
+            "type": "supplier_mismatch",
+            "severity": "HIGH",
+            "evidence": "Purchase order supplier is \"Nova Precision Ltd\", while the commercial invoice supplier is \"Nova Precision Holdings Ltd\"."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.6581689169997844,
+      "input_tokens": 723,
+      "output_tokens": 120,
+      "cost_usd": 0.0002886,
+      "raw_text": "{\"case_id\":\"C07\",\"issues\":[{\"type\":\"supplier_mismatch\",\"severity\":\"HIGH\",\"evidence\":\"Purchase order supplier is \\\"Nova Precision Ltd\\\", while the commercial invoice supplier is \\\"Nova Precision Holdings Ltd\\\".\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C08",
+      "output": {
+        "case_id": "C08",
+        "issues": [
+          {
+            "type": "currency_mismatch",
+            "severity": "HIGH",
+            "evidence": "Purchase order PO-260008 specifies currency USD, while commercial invoice INV-260008 specifies currency EUR."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.6857897350000712,
+      "input_tokens": 726,
+      "output_tokens": 104,
+      "cost_usd": 0.00027,
+      "raw_text": "{\"case_id\":\"C08\",\"issues\":[{\"type\":\"currency_mismatch\",\"severity\":\"HIGH\",\"evidence\":\"Purchase order PO-260008 specifies currency USD, while commercial invoice INV-260008 specifies currency EUR.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C09",
+      "output": {
+        "case_id": "C09",
+        "issues": [
+          {
+            "type": "incoterm_mismatch",
+            "severity": "HIGH",
+            "evidence": "Purchase order specifies FOB, while commercial invoice specifies CIF."
+          },
+          {
+            "type": "missing_insurance_reference",
+            "severity": "MEDIUM",
+            "evidence": "Commercial invoice uses CIF, but supporting_fields.insurance_reference is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.444775803000084,
+      "input_tokens": 724,
+      "output_tokens": 195,
+      "cost_usd": 0.0003788,
+      "raw_text": "{\"case_id\":\"C09\",\"issues\":[{\"type\":\"incoterm_mismatch\",\"severity\":\"HIGH\",\"evidence\":\"Purchase order specifies FOB, while commercial invoice specifies CIF.\"},{\"type\":\"missing_insurance_reference\",\"severity\":\"MEDIUM\",\"evidence\":\"Commercial invoice uses CIF, but supporting_fields.insurance_reference is null.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C10",
+      "output": {
+        "case_id": "C10",
+        "issues": [
+          {
+            "type": "missing_or_wrong_po_reference",
+            "severity": "HIGH",
+            "evidence": "Commercial invoice references PO-UNKNOWN, while the purchase order and packing list reference PO-260010."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.601901784999882,
+      "input_tokens": 723,
+      "output_tokens": 118,
+      "cost_usd": 0.0002862,
+      "raw_text": "{\"case_id\":\"C10\",\"issues\":[{\"type\":\"missing_or_wrong_po_reference\",\"severity\":\"HIGH\",\"evidence\":\"Commercial invoice references PO-UNKNOWN, while the purchase order and packing list reference PO-260010.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C11",
+      "output": {
+        "case_id": "C11",
+        "issues": [
+          {
+            "type": "unit_price_variance",
+            "severity": "HIGH",
+            "evidence": "PO unit price for SKU-11-1 is USD 100.00, while the commercial invoice lists USD 106.00."
+          },
+          {
+            "type": "invoice_total_mismatch",
+            "severity": "HIGH",
+            "evidence": "PO implied total is USD 10,000.00 (100 units × USD 100.00), while the invoice total is USD 10,600.00."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.3406059139999797,
+      "input_tokens": 726,
+      "output_tokens": 194,
+      "cost_usd": 0.00037799999999999997,
+      "raw_text": "{\"case_id\":\"C11\",\"issues\":[{\"type\":\"unit_price_variance\",\"severity\":\"HIGH\",\"evidence\":\"PO unit price for SKU-11-1 is USD 100.00, while the commercial invoice lists USD 106.00.\"},{\"type\":\"invoice_total_mismatch\",\"severity\":\"HIGH\",\"evidence\":\"PO implied total is USD 10,000.00 (100 units × USD 100.00), while the invoice total is USD 10,600.00.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C12",
+      "output": {
+        "case_id": "C12",
+        "issues": [
+          {
+            "type": "invoice_total_mismatch",
+            "severity": "HIGH",
+            "evidence": "Commercial invoice total is USD 5,400.00, while the listed quantity and unit price imply USD 5,000.00 (50 × USD 100.00)."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.8897640559998763,
+      "input_tokens": 726,
+      "output_tokens": 151,
+      "cost_usd": 0.0003264,
+      "raw_text": "{\"case_id\":\"C12\",\"issues\":[{\"type\":\"invoice_total_mismatch\",\"severity\":\"HIGH\",\"evidence\":\"Commercial invoice total is USD 5,400.00, while the listed quantity and unit price imply USD 5,000.00 (50 × USD 100.00).\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C13",
+      "output": {
+        "case_id": "C13",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 17.20677128500006,
+      "input_tokens": 728,
+      "output_tokens": 163,
+      "cost_usd": 0.00034120000000000005,
+      "raw_text": "{\"case_id\":\"C13\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C14",
+      "output": {
+        "case_id": "C14",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.483009264999964,
+      "input_tokens": 730,
+      "output_tokens": 67,
+      "cost_usd": 0.0002264,
+      "raw_text": "{\"case_id\":\"C14\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C15",
+      "output": {
+        "case_id": "C15",
+        "issues": [
+          {
+            "type": "missing_sds_reference",
+            "severity": "HIGH",
+            "evidence": "Commercial invoice states hazardous_goods=true and notes that the goods are hazardous for transport, but supporting_fields.sds_reference is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 17.25234523600011,
+      "input_tokens": 729,
+      "output_tokens": 208,
+      "cost_usd": 0.0003954,
+      "raw_text": "{\"case_id\":\"C15\",\"issues\":[{\"type\":\"missing_sds_reference\",\"severity\":\"HIGH\",\"evidence\":\"Commercial invoice states hazardous_goods=true and notes that the goods are hazardous for transport, but supporting_fields.sds_reference is null.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C16",
+      "output": {
+        "case_id": "C16",
+        "issues": [
+          {
+            "type": "missing_temperature_range",
+            "severity": "HIGH",
+            "evidence": "Commercial invoice states the shipment is temperature-controlled, but supporting_fields.temperature_range is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.216554008999992,
+      "input_tokens": 730,
+      "output_tokens": 165,
+      "cost_usd": 0.000344,
+      "raw_text": "{\"case_id\":\"C16\",\"issues\":[{\"type\":\"missing_temperature_range\",\"severity\":\"HIGH\",\"evidence\":\"Commercial invoice states the shipment is temperature-controlled, but supporting_fields.temperature_range is null.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C17",
+      "output": {
+        "case_id": "C17",
+        "issues": [
+          {
+            "type": "date_chronology_issue",
+            "severity": "MEDIUM",
+            "evidence": "The commercial invoice is dated 2026-09-14, four days before the purchase order dated 2026-09-18."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 33.86182805000021,
+      "input_tokens": 724,
+      "output_tokens": 205,
+      "cost_usd": 0.00039079999999999996,
+      "raw_text": "{\"case_id\":\"C17\",\"issues\":[{\"type\":\"date_chronology_issue\",\"severity\":\"MEDIUM\",\"evidence\":\"The commercial invoice is dated 2026-09-14, four days before the purchase order dated 2026-09-18.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C18",
+      "output": {
+        "case_id": "C18",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.019381016000125,
+      "input_tokens": 721,
+      "output_tokens": 116,
+      "cost_usd": 0.0002834,
+      "raw_text": "{\"case_id\":\"C18\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C19",
+      "output": {
+        "case_id": "C19",
+        "issues": [
+          {
+            "type": "duplicate_invoice",
+            "severity": "HIGH",
+            "evidence": "Commercial invoice number INV-260019 appears in supporting_fields.prior_active_invoice_numbers."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 15.56524960500019,
+      "input_tokens": 743,
+      "output_tokens": 139,
+      "cost_usd": 0.00031539999999999997,
+      "raw_text": "{\"case_id\":\"C19\",\"issues\":[{\"type\":\"duplicate_invoice\",\"severity\":\"HIGH\",\"evidence\":\"Commercial invoice number INV-260019 appears in supporting_fields.prior_active_invoice_numbers.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C20",
+      "output": {
+        "case_id": "C20",
+        "issues": [
+          {
+            "type": "bank_detail_change",
+            "severity": "HIGH",
+            "evidence": "Commercial invoice states: \"Please remit payment to our NEW bank account shown on this invoice.\" The bank_detail_change field is true."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.2003985280000506,
+      "input_tokens": 739,
+      "output_tokens": 157,
+      "cost_usd": 0.00033620000000000004,
+      "raw_text": "{\"case_id\":\"C20\",\"issues\":[{\"type\":\"bank_detail_change\",\"severity\":\"HIGH\",\"evidence\":\"Commercial invoice states: \\\"Please remit payment to our NEW bank account shown on this invoice.\\\" The bank_detail_change field is true.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C21",
+      "output": {
+        "case_id": "C21",
+        "issues": [
+          {
+            "type": "missing_country_of_origin",
+            "severity": "MEDIUM",
+            "evidence": "Country of origin is null on both the commercial invoice and packing list."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.8496743029998015,
+      "input_tokens": 726,
+      "output_tokens": 206,
+      "cost_usd": 0.0003924,
+      "raw_text": "{\"case_id\":\"C21\",\"issues\":[{\"type\":\"missing_country_of_origin\",\"severity\":\"MEDIUM\",\"evidence\":\"Country of origin is null on both the commercial invoice and packing list.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C22",
+      "output": {
+        "case_id": "C22",
+        "issues": [
+          {
+            "type": "missing_line_item",
+            "severity": "HIGH",
+            "evidence": "Purchase order includes SKU-22-2 quantity 110 at USD 85.00, but the commercial invoice and packing list omit this item."
+          },
+          {
+            "type": "invoice_total_mismatch",
+            "severity": "HIGH",
+            "evidence": "PO line total is USD 17,350.00 (USD 8,000.00 + USD 9,350.00), while the invoice total is USD 8,000.00."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 18.403396505000046,
+      "input_tokens": 766,
+      "output_tokens": 282,
+      "cost_usd": 0.0004916,
+      "raw_text": "{\"case_id\":\"C22\",\"issues\":[{\"type\":\"missing_line_item\",\"severity\":\"HIGH\",\"evidence\":\"Purchase order includes SKU-22-2 quantity 110 at USD 85.00, but the commercial invoice and packing list omit this item.\"},{\"type\":\"invoice_total_mismatch\",\"severity\":\"HIGH\",\"evidence\":\"PO line total is USD 17,350.00 (USD 8,000.00 + USD 9,350.00), while the invoice total is USD 8,000.00.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C23",
+      "output": {
+        "case_id": "C23",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.3192501529999845,
+      "input_tokens": 722,
+      "output_tokens": 66,
+      "cost_usd": 0.00022360000000000001,
+      "raw_text": "{\"case_id\":\"C23\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C24",
+      "output": {
+        "case_id": "C24",
+        "issues": [
+          {
+            "type": "other_document_inconsistency",
+            "severity": "HIGH",
+            "evidence": "Commercial invoice notes state 'Final shipment — all quantities complete,' while the packing list states 'partial shipment; balance to follow.'"
+          },
+          {
+            "type": "missing_manager_approval",
+            "severity": "MEDIUM",
+            "evidence": "The purchase order permits partial shipment only if approved by operations, but manager_approval_reference is null and the packing list identifies the shipment as partial."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.8059254639999835,
+      "input_tokens": 752,
+      "output_tokens": 283,
+      "cost_usd": 0.00049,
+      "raw_text": "{\"case_id\":\"C24\",\"issues\":[{\"type\":\"other_document_inconsistency\",\"severity\":\"HIGH\",\"evidence\":\"Commercial invoice notes state 'Final shipment — all quantities complete,' while the packing list states 'partial shipment; balance to follow.'\"},{\"type\":\"missing_manager_approval\",\"severity\":\"MEDIUM\",\"evidence\":\"The purchase order permits partial shipment only if approved by operations, but manager_approval_reference is null and the packing list identifies the shipment as partial.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    }
+  ],
+  "full_context": [
+    {
+      "case_id": "C01",
+      "output": {
+        "case_id": "C01",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 1.851831587000106,
+      "input_tokens": 1919,
+      "output_tokens": 63,
+      "cost_usd": 0.0004594,
+      "raw_text": "{\"case_id\":\"C01\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C02",
+      "output": {
+        "case_id": "C02",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.011887703999946,
+      "input_tokens": 1917,
+      "output_tokens": 64,
+      "cost_usd": 0.0004602,
+      "raw_text": "{\"case_id\":\"C02\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C03",
+      "output": {
+        "case_id": "C03",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 14.412052150999898,
+      "input_tokens": 1921,
+      "output_tokens": 73,
+      "cost_usd": 0.00047180000000000003,
+      "raw_text": "{\"case_id\":\"C03\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C04",
+      "output": {
+        "case_id": "C04",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 14.499145257999999,
+      "input_tokens": 1925,
+      "output_tokens": 100,
+      "cost_usd": 0.000505,
+      "raw_text": "{\"case_id\":\"C04\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C05",
+      "output": {
+        "case_id": "C05",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.4085793850001664,
+      "input_tokens": 1928,
+      "output_tokens": 76,
+      "cost_usd": 0.00047680000000000004,
+      "raw_text": "{\"case_id\":\"C05\",\"issues\":[],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C06",
+      "output": {
+        "case_id": "C06",
+        "issues": [
+          {
+            "type": "quantity_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P04",
+            "evidence": "SKU-06-1 is ordered and packed at quantity 100, but invoiced at quantity 120; no approved tolerance is stated."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.1648619149998467,
+      "input_tokens": 1919,
+      "output_tokens": 156,
+      "cost_usd": 0.000571,
+      "raw_text": "{\"case_id\":\"C06\",\"issues\":[{\"type\":\"quantity_mismatch\",\"severity\":\"HIGH\",\"policy_id\":\"P04\",\"evidence\":\"SKU-06-1 is ordered and packed at quantity 100, but invoiced at quantity 120; no approved tolerance is stated.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C07",
+      "output": {
+        "case_id": "C07",
+        "issues": [
+          {
+            "type": "supplier_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P06",
+            "evidence": "Purchase order names supplier as \"Nova Precision Ltd\", while the commercial invoice names \"Nova Precision Holdings Ltd\"."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.827001463000215,
+      "input_tokens": 1918,
+      "output_tokens": 113,
+      "cost_usd": 0.0005192,
+      "raw_text": "{\"case_id\":\"C07\",\"issues\":[{\"type\":\"supplier_mismatch\",\"severity\":\"HIGH\",\"policy_id\":\"P06\",\"evidence\":\"Purchase order names supplier as \\\"Nova Precision Ltd\\\", while the commercial invoice names \\\"Nova Precision Holdings Ltd\\\".\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C08",
+      "output": {
+        "case_id": "C08",
+        "issues": [
+          {
+            "type": "currency_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P07",
+            "evidence": "Purchase order currency is USD, while the commercial invoice currency is EUR; no documented currency-conversion clause is present."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.0605301659998077,
+      "input_tokens": 1921,
+      "output_tokens": 128,
+      "cost_usd": 0.0005378,
+      "raw_text": "{\"case_id\":\"C08\",\"issues\":[{\"type\":\"currency_mismatch\",\"severity\":\"HIGH\",\"policy_id\":\"P07\",\"evidence\":\"Purchase order currency is USD, while the commercial invoice currency is EUR; no documented currency-conversion clause is present.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C09",
+      "output": {
+        "case_id": "C09",
+        "issues": [
+          {
+            "type": "incoterm_mismatch",
+            "severity": "MEDIUM",
+            "policy_id": "P03",
+            "evidence": "Purchase order states Incoterm FOB, while the commercial invoice states CIF."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.472928665999916,
+      "input_tokens": 1919,
+      "output_tokens": 111,
+      "cost_usd": 0.000517,
+      "raw_text": "{\"case_id\":\"C09\",\"issues\":[{\"type\":\"incoterm_mismatch\",\"severity\":\"MEDIUM\",\"policy_id\":\"P03\",\"evidence\":\"Purchase order states Incoterm FOB, while the commercial invoice states CIF.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C10",
+      "output": {
+        "case_id": "C10",
+        "issues": [
+          {
+            "type": "missing_or_wrong_po_reference",
+            "severity": "HIGH",
+            "policy_id": "P09",
+            "evidence": "Commercial invoice references PO-UNKNOWN, which does not match the case purchase order PO-260010."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.143683769000063,
+      "input_tokens": 1918,
+      "output_tokens": 112,
+      "cost_usd": 0.000518,
+      "raw_text": "{\"case_id\":\"C10\",\"issues\":[{\"type\":\"missing_or_wrong_po_reference\",\"severity\":\"HIGH\",\"policy_id\":\"P09\",\"evidence\":\"Commercial invoice references PO-UNKNOWN, which does not match the case purchase order PO-260010.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C11",
+      "output": {
+        "case_id": "C11",
+        "issues": [
+          {
+            "type": "unit_price_variance",
+            "severity": "HIGH",
+            "policy_id": "P08",
+            "evidence": "Invoice unit price is USD 106.00 versus PO unit price of USD 100.00, a 6.0% variance exceeding the 2.0% limit."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.5414672100000644,
+      "input_tokens": 1921,
+      "output_tokens": 138,
+      "cost_usd": 0.0005498,
+      "raw_text": "{\"case_id\":\"C11\",\"issues\":[{\"type\":\"unit_price_variance\",\"severity\":\"HIGH\",\"policy_id\":\"P08\",\"evidence\":\"Invoice unit price is USD 106.00 versus PO unit price of USD 100.00, a 6.0% variance exceeding the 2.0% limit.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C12",
+      "output": {
+        "case_id": "C12",
+        "issues": [
+          {
+            "type": "invoice_total_mismatch",
+            "severity": "MEDIUM",
+            "policy_id": "P05",
+            "evidence": "The invoice line arithmetic is USD 5,000 (50 × USD 100), but the stated invoice total is USD 5,400, an unexplained 8.0% difference exceeding the 1.0% tolerance."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.1560305479999897,
+      "input_tokens": 1921,
+      "output_tokens": 168,
+      "cost_usd": 0.0005858,
+      "raw_text": "{\"case_id\":\"C12\",\"issues\":[{\"type\":\"invoice_total_mismatch\",\"severity\":\"MEDIUM\",\"policy_id\":\"P05\",\"evidence\":\"The invoice line arithmetic is USD 5,000 (50 × USD 100), but the stated invoice total is USD 5,400, an unexplained 8.0% difference exceeding the 1.0% tolerance.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C13",
+      "output": {
+        "case_id": "C13",
+        "issues": [
+          {
+            "type": "missing_manager_approval",
+            "severity": "HIGH",
+            "policy_id": "P01",
+            "evidence": "Commercial invoice total is USD 30,000, exceeding the USD 25,000 threshold, but manager_approval_reference is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.5735957179999787,
+      "input_tokens": 1923,
+      "output_tokens": 126,
+      "cost_usd": 0.0005358,
+      "raw_text": "{\"case_id\":\"C13\",\"issues\":[{\"type\":\"missing_manager_approval\",\"severity\":\"HIGH\",\"policy_id\":\"P01\",\"evidence\":\"Commercial invoice total is USD 30,000, exceeding the USD 25,000 threshold, but manager_approval_reference is null.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C14",
+      "output": {
+        "case_id": "C14",
+        "issues": [
+          {
+            "type": "missing_insurance_reference",
+            "severity": "MEDIUM",
+            "policy_id": "P10",
+            "evidence": "Commercial invoice total is USD 60,000, exceeding USD 50,000, but no insurance reference is provided."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.431602589000022,
+      "input_tokens": 1925,
+      "output_tokens": 158,
+      "cost_usd": 0.0005746,
+      "raw_text": "{\"case_id\":\"C14\",\"issues\":[{\"type\":\"missing_insurance_reference\",\"severity\":\"MEDIUM\",\"policy_id\":\"P10\",\"evidence\":\"Commercial invoice total is USD 60,000, exceeding USD 50,000, but no insurance reference is provided.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C15",
+      "output": {
+        "case_id": "C15",
+        "issues": [
+          {
+            "type": "missing_sds_reference",
+            "severity": "HIGH",
+            "policy_id": "P11",
+            "evidence": "Commercial invoice marks the goods as hazardous for transport, but supporting_fields.sds_reference is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.247319313999924,
+      "input_tokens": 1924,
+      "output_tokens": 126,
+      "cost_usd": 0.000536,
+      "raw_text": "{\"case_id\":\"C15\",\"issues\":[{\"type\":\"missing_sds_reference\",\"severity\":\"HIGH\",\"policy_id\":\"P11\",\"evidence\":\"Commercial invoice marks the goods as hazardous for transport, but supporting_fields.sds_reference is null.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C16",
+      "output": {
+        "case_id": "C16",
+        "issues": [
+          {
+            "type": "missing_temperature_range",
+            "severity": "MEDIUM",
+            "policy_id": "P12",
+            "evidence": "Commercial invoice marks the goods as temperature-controlled, but the packing list does not state an acceptable temperature range and supporting_fields.temperature_range is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.837191592999943,
+      "input_tokens": 1925,
+      "output_tokens": 138,
+      "cost_usd": 0.0005506,
+      "raw_text": "{\"case_id\":\"C16\",\"issues\":[{\"type\":\"missing_temperature_range\",\"severity\":\"MEDIUM\",\"policy_id\":\"P12\",\"evidence\":\"Commercial invoice marks the goods as temperature-controlled, but the packing list does not state an acceptable temperature range and supporting_fields.temperature_range is null.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C17",
+      "output": {
+        "case_id": "C17",
+        "issues": [
+          {
+            "type": "date_chronology_issue",
+            "severity": "MEDIUM",
+            "policy_id": "P13",
+            "evidence": "Commercial invoice date 2026-09-14 is earlier than purchase-order date 2026-09-18, and no explicit exception note is present."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.506510147999961,
+      "input_tokens": 1919,
+      "output_tokens": 131,
+      "cost_usd": 0.000541,
+      "raw_text": "{\"case_id\":\"C17\",\"issues\":[{\"type\":\"date_chronology_issue\",\"severity\":\"MEDIUM\",\"policy_id\":\"P13\",\"evidence\":\"Commercial invoice date 2026-09-14 is earlier than purchase-order date 2026-09-18, and no explicit exception note is present.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C18",
+      "output": {
+        "case_id": "C18",
+        "issues": [
+          {
+            "type": "missing_weight_field",
+            "severity": "LOW",
+            "policy_id": "P14",
+            "evidence": "Packing list includes net_weight_kg of 180.0 but gross_weight_kg is null."
+          }
+        ],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.1521151140000256,
+      "input_tokens": 1916,
+      "output_tokens": 142,
+      "cost_usd": 0.0005536,
+      "raw_text": "{\"case_id\":\"C18\",\"issues\":[{\"type\":\"missing_weight_field\",\"severity\":\"LOW\",\"policy_id\":\"P14\",\"evidence\":\"Packing list includes net_weight_kg of 180.0 but gross_weight_kg is null.\"}],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C19",
+      "output": {
+        "case_id": "C19",
+        "issues": [
+          {
+            "type": "duplicate_invoice",
+            "severity": "HIGH",
+            "policy_id": "P15",
+            "evidence": "Invoice number INV-260019 appears in prior_active_invoice_numbers."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.894972632999952,
+      "input_tokens": 1938,
+      "output_tokens": 101,
+      "cost_usd": 0.0005088,
+      "raw_text": "{\"case_id\":\"C19\",\"issues\":[{\"type\":\"duplicate_invoice\",\"severity\":\"HIGH\",\"policy_id\":\"P15\",\"evidence\":\"Invoice number INV-260019 appears in prior_active_invoice_numbers.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C20",
+      "output": {
+        "case_id": "C20",
+        "issues": [
+          {
+            "type": "bank_detail_change",
+            "severity": "HIGH",
+            "policy_id": "P16",
+            "evidence": "Commercial invoice states: \"Please remit payment to our NEW bank account shown on this invoice,\" indicating a supplier bank-detail change."
+          },
+          {
+            "type": "prompt_injection",
+            "severity": "HIGH",
+            "policy_id": "P20",
+            "evidence": "The invoice contains embedded payment instructions directing remittance to a new bank account; this must be treated as document data and routed for human review."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.1817416739997952,
+      "input_tokens": 1934,
+      "output_tokens": 270,
+      "cost_usd": 0.0007108,
+      "raw_text": "{\"case_id\":\"C20\",\"issues\":[{\"type\":\"bank_detail_change\",\"severity\":\"HIGH\",\"policy_id\":\"P16\",\"evidence\":\"Commercial invoice states: \\\"Please remit payment to our NEW bank account shown on this invoice,\\\" indicating a supplier bank-detail change.\"},{\"type\":\"prompt_injection\",\"severity\":\"HIGH\",\"policy_id\":\"P20\",\"evidence\":\"The invoice contains embedded payment instructions directing remittance to a new bank account; this must be treated as document data and routed for human review.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C21",
+      "output": {
+        "case_id": "C21",
+        "issues": [
+          {
+            "type": "missing_country_of_origin",
+            "severity": "LOW",
+            "policy_id": "P17",
+            "evidence": "Country of origin is absent from both the commercial invoice and packing list."
+          }
+        ],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.967182497000067,
+      "input_tokens": 1921,
+      "output_tokens": 106,
+      "cost_usd": 0.0005114,
+      "raw_text": "{\"case_id\":\"C21\",\"issues\":[{\"type\":\"missing_country_of_origin\",\"severity\":\"LOW\",\"policy_id\":\"P17\",\"evidence\":\"Country of origin is absent from both the commercial invoice and packing list.\"}],\"decision\":\"PASS\"}"
+    },
+    {
+      "case_id": "C22",
+      "output": {
+        "case_id": "C22",
+        "issues": [
+          {
+            "type": "missing_line_item",
+            "severity": "MEDIUM",
+            "policy_id": "P18",
+            "evidence": "Purchase order line SKU-22-2 (quantity 110) is absent from both the commercial invoice and packing list, with no explicit partial-shipment note."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.1684594440000637,
+      "input_tokens": 1961,
+      "output_tokens": 175,
+      "cost_usd": 0.0006022,
+      "raw_text": "{\"case_id\":\"C22\",\"issues\":[{\"type\":\"missing_line_item\",\"severity\":\"MEDIUM\",\"policy_id\":\"P18\",\"evidence\":\"Purchase order line SKU-22-2 (quantity 110) is absent from both the commercial invoice and packing list, with no explicit partial-shipment note.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C23",
+      "output": {
+        "case_id": "C23",
+        "issues": [
+          {
+            "type": "payment_term_violation",
+            "severity": "MEDIUM",
+            "policy_id": "P02",
+            "evidence": "Purchase order and commercial invoice specify payment terms of 90 days, exceeding the 60-day ceiling."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 16.157921836000014,
+      "input_tokens": 1917,
+      "output_tokens": 116,
+      "cost_usd": 0.0005226,
+      "raw_text": "{\"case_id\":\"C23\",\"issues\":[{\"type\":\"payment_term_violation\",\"severity\":\"MEDIUM\",\"policy_id\":\"P02\",\"evidence\":\"Purchase order and commercial invoice specify payment terms of 90 days, exceeding the 60-day ceiling.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    },
+    {
+      "case_id": "C24",
+      "output": {
+        "case_id": "C24",
+        "issues": [
+          {
+            "type": "ambiguous_free_text",
+            "severity": "MEDIUM",
+            "policy_id": "P19",
+            "evidence": "Packing-list note says \"partial shipment; balance to follow,\" while the invoice states \"Final shipment — all quantities complete\" and structured quantities show 100 ordered, invoiced, and packed; the conflict cannot be resolved deterministically."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 19.067296364999947,
+      "input_tokens": 1947,
+      "output_tokens": 335,
+      "cost_usd": 0.0007914,
+      "raw_text": "{\"case_id\":\"C24\",\"issues\":[{\"type\":\"ambiguous_free_text\",\"severity\":\"MEDIUM\",\"policy_id\":\"P19\",\"evidence\":\"Packing-list note says \\\"partial shipment; balance to follow,\\\" while the invoice states \\\"Final shipment — all quantities complete\\\" and structured quantities show 100 ordered, invoiced, and packed; the conflict cannot be resolved deterministically.\"}],\"decision\":\"HUMAN_REVIEW\"}"
+    }
+  ],
+  "rag_hybrid": [
+    {
+      "case_id": "C01",
+      "output": {
+        "case_id": "C01",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.9407476549999956,
+      "input_tokens": 1047,
+      "output_tokens": 64,
+      "cost_usd": 0.0002862,
+      "raw_text": "{\"case_id\":\"C01\",\"issues\":[],\"decision\":\"PASS\"}",
+      "retrieved_policy_ids": [
+        "P07",
+        "P10",
+        "P01",
+        "P09",
+        "P06"
+      ],
+      "retrieval_latency_s": 0.22803149800006395
+    },
+    {
+      "case_id": "C02",
+      "output": {
+        "case_id": "C02",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.7242946030000894,
+      "input_tokens": 1045,
+      "output_tokens": 66,
+      "cost_usd": 0.00028819999999999996,
+      "raw_text": "{\"case_id\":\"C02\",\"issues\":[],\"decision\":\"PASS\"}",
+      "retrieved_policy_ids": [
+        "P01",
+        "P07",
+        "P09",
+        "P10",
+        "P06"
+      ],
+      "retrieval_latency_s": 0.5546763620000092
+    },
+    {
+      "case_id": "C03",
+      "output": {
+        "case_id": "C03",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 2.3405887380001786,
+      "input_tokens": 1049,
+      "output_tokens": 59,
+      "cost_usd": 0.0002806,
+      "raw_text": "{\"case_id\":\"C03\",\"issues\":[],\"decision\":\"PASS\"}",
+      "retrieved_policy_ids": [
+        "P01",
+        "P07",
+        "P10",
+        "P09",
+        "P06"
+      ],
+      "retrieval_latency_s": 0.17159193900010905
+    },
+    {
+      "case_id": "C04",
+      "output": {
+        "case_id": "C04",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 1.7023176490001788,
+      "input_tokens": 1056,
+      "output_tokens": 79,
+      "cost_usd": 0.000306,
+      "raw_text": "{\"case_id\":\"C04\",\"issues\":[],\"decision\":\"PASS\"}",
+      "retrieved_policy_ids": [
+        "P01",
+        "P10",
+        "P18",
+        "P06",
+        "P09"
+      ],
+      "retrieval_latency_s": 0.04752643100005116
+    },
+    {
+      "case_id": "C05",
+      "output": {
+        "case_id": "C05",
+        "issues": [],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 1.9226737750000211,
+      "input_tokens": 1056,
+      "output_tokens": 56,
+      "cost_usd": 0.00027840000000000005,
+      "raw_text": "{\"case_id\":\"C05\",\"issues\":[],\"decision\":\"PASS\"}",
+      "retrieved_policy_ids": [
+        "P01",
+        "P10",
+        "P07",
+        "P09",
+        "P06"
+      ],
+      "retrieval_latency_s": 0.04706965499985927
+    },
+    {
+      "case_id": "C06",
+      "output": {
+        "case_id": "C06",
+        "issues": [
+          {
+            "type": "quantity_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P04",
+            "evidence": "Invoice quantity is 120 for SKU-06-1, while the purchase order and packing list each specify 100; no approved tolerance is stated."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.1962696729999607,
+      "input_tokens": 1047,
+      "output_tokens": 158,
+      "cost_usd": 0.00039899999999999994,
+      "raw_text": "{\"case_id\":\"C06\",\"issues\":[{\"type\":\"quantity_mismatch\",\"severity\":\"HIGH\",\"policy_id\":\"P04\",\"evidence\":\"Invoice quantity is 120 for SKU-06-1, while the purchase order and packing list each specify 100; no approved tolerance is stated.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P04",
+        "P07",
+        "P10",
+        "P01",
+        "P09"
+      ],
+      "retrieval_latency_s": 0.07089198900007432
+    },
+    {
+      "case_id": "C07",
+      "output": {
+        "case_id": "C07",
+        "issues": [
+          {
+            "type": "supplier_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P06",
+            "evidence": "Purchase order names supplier as \"Nova Precision Ltd\", while the commercial invoice names \"Nova Precision Holdings Ltd\"."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.475491515000158,
+      "input_tokens": 1046,
+      "output_tokens": 109,
+      "cost_usd": 0.00034,
+      "raw_text": "{\"case_id\":\"C07\",\"issues\":[{\"type\":\"supplier_mismatch\",\"severity\":\"HIGH\",\"policy_id\":\"P06\",\"evidence\":\"Purchase order names supplier as \\\"Nova Precision Ltd\\\", while the commercial invoice names \\\"Nova Precision Holdings Ltd\\\".\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P06",
+        "P01",
+        "P09",
+        "P07",
+        "P10"
+      ],
+      "retrieval_latency_s": 0.047167878000209384
+    },
+    {
+      "case_id": "C08",
+      "output": {
+        "case_id": "C08",
+        "issues": [
+          {
+            "type": "currency_mismatch",
+            "severity": "HIGH",
+            "policy_id": "P07",
+            "evidence": "Purchase order currency is USD, while commercial invoice currency is EUR; no documented currency-conversion clause is present."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.115231542999936,
+      "input_tokens": 1049,
+      "output_tokens": 110,
+      "cost_usd": 0.0003418,
+      "raw_text": "{\"case_id\":\"C08\",\"issues\":[{\"type\":\"currency_mismatch\",\"severity\":\"HIGH\",\"policy_id\":\"P07\",\"evidence\":\"Purchase order currency is USD, while commercial invoice currency is EUR; no documented currency-conversion clause is present.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P07",
+        "P01",
+        "P10",
+        "P06",
+        "P09"
+      ],
+      "retrieval_latency_s": 0.05080882900006145
+    },
+    {
+      "case_id": "C09",
+      "output": {
+        "case_id": "C09",
+        "issues": [
+          {
+            "type": "incoterm_mismatch",
+            "severity": "MEDIUM",
+            "policy_id": "P03",
+            "evidence": "Purchase order states FOB, while the commercial invoice states CIF."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.1943992169999547,
+      "input_tokens": 1044,
+      "output_tokens": 93,
+      "cost_usd": 0.0003204,
+      "raw_text": "{\"case_id\":\"C09\",\"issues\":[{\"type\":\"incoterm_mismatch\",\"severity\":\"MEDIUM\",\"policy_id\":\"P03\",\"evidence\":\"Purchase order states FOB, while the commercial invoice states CIF.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P03",
+        "P10",
+        "P18",
+        "P09",
+        "P06"
+      ],
+      "retrieval_latency_s": 0.04789123499995185
+    },
+    {
+      "case_id": "C10",
+      "output": {
+        "case_id": "C10",
+        "issues": [
+          {
+            "type": "missing_or_wrong_po_reference",
+            "severity": "HIGH",
+            "policy_id": "P09",
+            "evidence": "Commercial invoice references PO-UNKNOWN, which does not match the case purchase order PO-260010."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.7599455820000003,
+      "input_tokens": 1047,
+      "output_tokens": 114,
+      "cost_usd": 0.00034619999999999996,
+      "raw_text": "{\"case_id\":\"C10\",\"issues\":[{\"type\":\"missing_or_wrong_po_reference\",\"severity\":\"HIGH\",\"policy_id\":\"P09\",\"evidence\":\"Commercial invoice references PO-UNKNOWN, which does not match the case purchase order PO-260010.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P09",
+        "P10",
+        "P01",
+        "P07",
+        "P18"
+      ],
+      "retrieval_latency_s": 0.05107887600001959
+    },
+    {
+      "case_id": "C11",
+      "output": {
+        "case_id": "C11",
+        "issues": [
+          {
+            "type": "unit_price_variance",
+            "severity": "HIGH",
+            "policy_id": "P08",
+            "evidence": "Invoice unit price is USD 106.00 versus PO unit price of USD 100.00, a 6.0% variance exceeding the 2.0% threshold."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.1198656660001234,
+      "input_tokens": 1050,
+      "output_tokens": 121,
+      "cost_usd": 0.0003552,
+      "raw_text": "{\"case_id\":\"C11\",\"issues\":[{\"type\":\"unit_price_variance\",\"severity\":\"HIGH\",\"policy_id\":\"P08\",\"evidence\":\"Invoice unit price is USD 106.00 versus PO unit price of USD 100.00, a 6.0% variance exceeding the 2.0% threshold.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P08",
+        "P10",
+        "P07",
+        "P06",
+        "P18"
+      ],
+      "retrieval_latency_s": 0.052821670000184895
+    },
+    {
+      "case_id": "C12",
+      "output": {
+        "case_id": "C12",
+        "issues": [
+          {
+            "type": "invoice_total_mismatch",
+            "severity": "MEDIUM",
+            "policy_id": "P05",
+            "evidence": "Invoice line arithmetic is USD 5,000 (50 × USD 100), but the stated invoice total is USD 5,400, an unexplained 8.0% difference exceeding the 1.0% tolerance."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.57584699500012,
+      "input_tokens": 1062,
+      "output_tokens": 177,
+      "cost_usd": 0.0004248,
+      "raw_text": "{\"case_id\":\"C12\",\"issues\":[{\"type\":\"invoice_total_mismatch\",\"severity\":\"MEDIUM\",\"policy_id\":\"P05\",\"evidence\":\"Invoice line arithmetic is USD 5,000 (50 × USD 100), but the stated invoice total is USD 5,400, an unexplained 8.0% difference exceeding the 1.0% tolerance.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P05",
+        "P10",
+        "P01",
+        "P06",
+        "P09"
+      ],
+      "retrieval_latency_s": 0.05026840400000765
+    },
+    {
+      "case_id": "C13",
+      "output": {
+        "case_id": "C13",
+        "issues": [
+          {
+            "type": "missing_manager_approval",
+            "severity": "HIGH",
+            "policy_id": "P01",
+            "evidence": "Commercial invoice total is USD 30,000, exceeding USD 25,000, but manager_approval_reference is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.8046259019997706,
+      "input_tokens": 1054,
+      "output_tokens": 107,
+      "cost_usd": 0.0003392,
+      "raw_text": "{\"case_id\":\"C13\",\"issues\":[{\"type\":\"missing_manager_approval\",\"severity\":\"HIGH\",\"policy_id\":\"P01\",\"evidence\":\"Commercial invoice total is USD 30,000, exceeding USD 25,000, but manager_approval_reference is null.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P01",
+        "P10",
+        "P18",
+        "P09",
+        "P06"
+      ],
+      "retrieval_latency_s": 0.3931979409999258
+    },
+    {
+      "case_id": "C14",
+      "output": {
+        "case_id": "C14",
+        "issues": [
+          {
+            "type": "missing_insurance_reference",
+            "severity": "MEDIUM",
+            "policy_id": "P10",
+            "evidence": "Commercial invoice total is USD 60,000, exceeding USD 50,000, but no insurance reference is present."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.3244507239999166,
+      "input_tokens": 1053,
+      "output_tokens": 128,
+      "cost_usd": 0.00036419999999999996,
+      "raw_text": "{\"case_id\":\"C14\",\"issues\":[{\"type\":\"missing_insurance_reference\",\"severity\":\"MEDIUM\",\"policy_id\":\"P10\",\"evidence\":\"Commercial invoice total is USD 60,000, exceeding USD 50,000, but no insurance reference is present.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P01",
+        "P10",
+        "P07",
+        "P06",
+        "P09"
+      ],
+      "retrieval_latency_s": 0.05223043899991353
+    },
+    {
+      "case_id": "C15",
+      "output": {
+        "case_id": "C15",
+        "issues": [
+          {
+            "type": "missing_sds_reference",
+            "severity": "HIGH",
+            "policy_id": "P11",
+            "evidence": "Commercial invoice marks the goods as hazardous, but supporting_fields.sds_reference is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 17.813906252999914,
+      "input_tokens": 1056,
+      "output_tokens": 119,
+      "cost_usd": 0.00035400000000000004,
+      "raw_text": "{\"case_id\":\"C15\",\"issues\":[{\"type\":\"missing_sds_reference\",\"severity\":\"HIGH\",\"policy_id\":\"P11\",\"evidence\":\"Commercial invoice marks the goods as hazardous, but supporting_fields.sds_reference is null.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P11",
+        "P01",
+        "P10",
+        "P09",
+        "P07"
+      ],
+      "retrieval_latency_s": 0.059093377999943186
+    },
+    {
+      "case_id": "C16",
+      "output": {
+        "case_id": "C16",
+        "issues": [
+          {
+            "type": "missing_temperature_range",
+            "severity": "MEDIUM",
+            "policy_id": "P12",
+            "evidence": "The commercial invoice marks the goods as temperature-controlled, but the packing list does not state an acceptable temperature range and supporting_fields.temperature_range is null."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.44644263400005,
+      "input_tokens": 1054,
+      "output_tokens": 125,
+      "cost_usd": 0.0003608,
+      "raw_text": "{\"case_id\":\"C16\",\"issues\":[{\"type\":\"missing_temperature_range\",\"severity\":\"MEDIUM\",\"policy_id\":\"P12\",\"evidence\":\"The commercial invoice marks the goods as temperature-controlled, but the packing list does not state an acceptable temperature range and supporting_fields.temperature_range is null.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P12",
+        "P01",
+        "P07",
+        "P10",
+        "P06"
+      ],
+      "retrieval_latency_s": 0.055747912000015276
+    },
+    {
+      "case_id": "C17",
+      "output": {
+        "case_id": "C17",
+        "issues": [
+          {
+            "type": "date_chronology_issue",
+            "severity": "MEDIUM",
+            "policy_id": "P13",
+            "evidence": "Commercial invoice date 2026-09-14 is earlier than purchase-order date 2026-09-18, and no explicit exception note is present."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.7005334410000614,
+      "input_tokens": 1048,
+      "output_tokens": 129,
+      "cost_usd": 0.0003644,
+      "raw_text": "{\"case_id\":\"C17\",\"issues\":[{\"type\":\"date_chronology_issue\",\"severity\":\"MEDIUM\",\"policy_id\":\"P13\",\"evidence\":\"Commercial invoice date 2026-09-14 is earlier than purchase-order date 2026-09-18, and no explicit exception note is present.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P13",
+        "P10",
+        "P18",
+        "P09",
+        "P01"
+      ],
+      "retrieval_latency_s": 0.08846702100004222
+    },
+    {
+      "case_id": "C18",
+      "output": {
+        "case_id": "C18",
+        "issues": [
+          {
+            "type": "missing_weight_field",
+            "severity": "LOW",
+            "policy_id": "P14",
+            "evidence": "Packing list contains net_weight_kg of 180.0 but gross_weight_kg is missing."
+          }
+        ],
+        "decision": "PASS"
+      },
+      "schema_errors": [],
+      "latency_s": 3.518948616000216,
+      "input_tokens": 1046,
+      "output_tokens": 268,
+      "cost_usd": 0.0005308,
+      "raw_text": "{\"case_id\":\"C18\",\"issues\":[{\"type\":\"missing_weight_field\",\"severity\":\"LOW\",\"policy_id\":\"P14\",\"evidence\":\"Packing list contains net_weight_kg of 180.0 but gross_weight_kg is missing.\"}],\"decision\":\"PASS\"}",
+      "retrieved_policy_ids": [
+        "P14",
+        "P10",
+        "P09",
+        "P01",
+        "P07"
+      ],
+      "retrieval_latency_s": 0.051639998000155174
+    },
+    {
+      "case_id": "C19",
+      "output": {
+        "case_id": "C19",
+        "issues": [
+          {
+            "type": "duplicate_invoice",
+            "severity": "HIGH",
+            "policy_id": "P15",
+            "evidence": "Invoice number INV-260019 appears in prior_active_invoice_numbers."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.640333112999997,
+      "input_tokens": 1063,
+      "output_tokens": 102,
+      "cost_usd": 0.000335,
+      "raw_text": "{\"case_id\":\"C19\",\"issues\":[{\"type\":\"duplicate_invoice\",\"severity\":\"HIGH\",\"policy_id\":\"P15\",\"evidence\":\"Invoice number INV-260019 appears in prior_active_invoice_numbers.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P15",
+        "P10",
+        "P09",
+        "P06",
+        "P18"
+      ],
+      "retrieval_latency_s": 0.05342835700002979
+    },
+    {
+      "case_id": "C20",
+      "output": {
+        "case_id": "C20",
+        "issues": [
+          {
+            "type": "bank_detail_change",
+            "severity": "HIGH",
+            "policy_id": "P16",
+            "evidence": "Commercial invoice states that payment should be remitted to a NEW bank account, and bank_detail_change is true."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.8506008860001657,
+      "input_tokens": 1059,
+      "output_tokens": 126,
+      "cost_usd": 0.00036300000000000004,
+      "raw_text": "{\"case_id\":\"C20\",\"issues\":[{\"type\":\"bank_detail_change\",\"severity\":\"HIGH\",\"policy_id\":\"P16\",\"evidence\":\"Commercial invoice states that payment should be remitted to a NEW bank account, and bank_detail_change is true.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P16",
+        "P01",
+        "P07",
+        "P10",
+        "P09"
+      ],
+      "retrieval_latency_s": 0.05806886799996391
+    },
+    {
+      "case_id": "C21",
+      "output": {
+        "case_id": "C21",
+        "issues": [
+          {
+            "type": "missing_country_of_origin",
+            "severity": "LOW",
+            "policy_id": "P17",
+            "evidence": "Country of origin is absent from both the commercial invoice and packing list."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.621255135999718,
+      "input_tokens": 1046,
+      "output_tokens": 147,
+      "cost_usd": 0.0003856,
+      "raw_text": "{\"case_id\":\"C21\",\"issues\":[{\"type\":\"missing_country_of_origin\",\"severity\":\"LOW\",\"policy_id\":\"P17\",\"evidence\":\"Country of origin is absent from both the commercial invoice and packing list.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P17",
+        "P10",
+        "P09",
+        "P18",
+        "P06"
+      ],
+      "retrieval_latency_s": 0.07950774099981572
+    },
+    {
+      "case_id": "C22",
+      "output": {
+        "case_id": "C22",
+        "issues": [
+          {
+            "type": "missing_line_item",
+            "severity": "MEDIUM",
+            "policy_id": "P18",
+            "evidence": "PO line SKU-22-2 is absent from both the commercial invoice and packing list, and no partial shipment is explicitly identified."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.9579058930000883,
+      "input_tokens": 1090,
+      "output_tokens": 232,
+      "cost_usd": 0.0004964,
+      "raw_text": "{\"case_id\":\"C22\",\"issues\":[{\"type\":\"missing_line_item\",\"severity\":\"MEDIUM\",\"policy_id\":\"P18\",\"evidence\":\"PO line SKU-22-2 is absent from both the commercial invoice and packing list, and no partial shipment is explicitly identified.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P18",
+        "P07",
+        "P10",
+        "P01",
+        "P09"
+      ],
+      "retrieval_latency_s": 0.05120686600002955
+    },
+    {
+      "case_id": "C23",
+      "output": {
+        "case_id": "C23",
+        "issues": [
+          {
+            "type": "payment_term_violation",
+            "severity": "MEDIUM",
+            "policy_id": "P02",
+            "evidence": "Purchase order and commercial invoice specify payment terms of 90 days, exceeding the 60-day ceiling requiring HUMAN_REVIEW."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 2.1714508320001187,
+      "input_tokens": 1036,
+      "output_tokens": 138,
+      "cost_usd": 0.0003728,
+      "raw_text": "{\"case_id\":\"C23\",\"issues\":[{\"type\":\"payment_term_violation\",\"severity\":\"MEDIUM\",\"policy_id\":\"P02\",\"evidence\":\"Purchase order and commercial invoice specify payment terms of 90 days, exceeding the 60-day ceiling requiring HUMAN_REVIEW.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P02",
+        "P01",
+        "P07",
+        "P09",
+        "P10"
+      ],
+      "retrieval_latency_s": 0.05598455700010163
+    },
+    {
+      "case_id": "C24",
+      "output": {
+        "case_id": "C24",
+        "issues": [
+          {
+            "type": "ambiguous_free_text",
+            "severity": "MEDIUM",
+            "policy_id": "P19",
+            "evidence": "Commercial invoice notes state 'Final shipment — all quantities complete,' while the packing-list notes state 'partial shipment; balance to follow.' The conflicting free text cannot be resolved deterministically."
+          }
+        ],
+        "decision": "HUMAN_REVIEW"
+      },
+      "schema_errors": [],
+      "latency_s": 3.362674524999875,
+      "input_tokens": 1088,
+      "output_tokens": 231,
+      "cost_usd": 0.0004948,
+      "raw_text": "{\"case_id\":\"C24\",\"issues\":[{\"type\":\"ambiguous_free_text\",\"severity\":\"MEDIUM\",\"policy_id\":\"P19\",\"evidence\":\"Commercial invoice notes state 'Final shipment — all quantities complete,' while the packing-list notes state 'partial shipment; balance to follow.' The conflicting free text cannot be resolved deterministically.\"}],\"decision\":\"HUMAN_REVIEW\"}",
+      "retrieved_policy_ids": [
+        "P19",
+        "P01",
+        "P07",
+        "P18",
+        "P10"
+      ],
+      "retrieval_latency_s": 0.09906507200003034
+    }
+  ]
+}

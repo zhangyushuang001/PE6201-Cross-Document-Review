@@ -1,0 +1,7 @@
+case_id,expected,predicted,false_flags,success,expected_decision,predicted_decision,schema_errors
+C25,prompt_injection,prompt_injection,0,True,HUMAN_REVIEW,HUMAN_REVIEW,
+C26,quantity_mismatch;unit_price_variance,invoice_total_mismatch;quantity_mismatch;unit_price_variance,1,True,HUMAN_REVIEW,HUMAN_REVIEW,
+C27,missing_insurance_reference;missing_manager_approval,,0,False,HUMAN_REVIEW,PASS,
+C28,missing_country_of_origin;supplier_mismatch,missing_country_of_origin;supplier_mismatch,0,True,HUMAN_REVIEW,HUMAN_REVIEW,
+C29,prompt_injection;unit_price_variance,invoice_total_mismatch;prompt_injection;unit_price_variance,1,True,HUMAN_REVIEW,HUMAN_REVIEW,
+C30,,,0,True,PASS,PASS,

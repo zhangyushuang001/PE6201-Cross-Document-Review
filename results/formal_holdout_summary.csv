@@ -1,0 +1,5 @@
+arm,high_severity_recall,issue_precision,issue_recall_all,avg_false_flags_per_case,successful_cases,success_rate,decision_accuracy,policy_grounding_accuracy,avg_latency_s,total_input_tokens,total_output_tokens,total_cost_usd,cost_per_success_usd,schema_error_cases,meets_recall_target,meets_false_flag_target
+rule-only,1.0,1.0,1.0,0.0,6,1.0,1.0,1.0,9.744200000720109e-05,0,0,0.0,0.0,0,True,True
+direct-model,0.8571428571428571,0.7777777777777778,0.7777777777777778,0.3333333333333333,5,0.8333333333333334,0.8333333333333334,,6.012834100999972,4404,1046,0.002136,0.0004272,0,False,True
+full-context,1.0,1.0,1.0,0.0,6,1.0,1.0,1.0,5.022144836333325,11574,993,0.0035064000000000002,0.0005844,0,True,True
+RAG-hybrid,1.0,0.9,1.0,0.16666666666666666,6,1.0,0.8333333333333334,1.0,7.870712927999989,6403,1070,0.0025646,0.0004274333333333334,0,True,True

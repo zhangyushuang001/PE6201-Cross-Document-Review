@@ -1,0 +1,24 @@
+PE6201 Formal Experiment — Ground Truth Freeze Record
+
+Project:
+AI-Assisted Cross-Document Review for Import and Export Documentation Compliance
+
+Frozen artifacts:
+- policies_final.json
+- cases_30_final.json
+- ground_truth_30_FROZEN.json
+
+Dataset:
+- 30 synthetic cases
+- C01-C24: development/evaluation
+- C25-C30: holdout
+- 20 simulated internal policies
+
+Manual review:
+The student reviewed the human-readable 30-case checklist before formal testing and confirmed the seeded clean/error design was reasonable.
+
+Freeze rule:
+Do not edit ground_truth_30_FROZEN.json after viewing formal model outputs.
+If a genuine data bug is discovered, document it explicitly rather than silently changing the answer key.
+
+These are synthetic course-project policies and cases, not statements of real trade law or customs requirements.
