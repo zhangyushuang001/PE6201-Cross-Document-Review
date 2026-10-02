@@ -23,7 +23,10 @@ The holdout set was not used for further tuning after the final configuration wa
 ## Why synthetic data
 
 The project avoids confidential company information. Synthetic cases also make it possible
-to seed known inconsistencies and evaluate against explicit ground truth.
+to seed known inconsistencies and evaluate against explicit ground truth. The cases were
+built from structured document templates and deliberately edited to introduce known
+mismatches or policy conditions; the evaluated model was not used to define the answer key.
+See `GENERATION_LOG.md` for the generation and freeze process.
 
 ## Case coverage
 
@@ -41,5 +44,7 @@ The dataset includes structured mismatches and policy-dependent cases such as:
 ## Important limitation
 
 These cases are useful for architecture comparison, not as evidence of production accuracy.
+The six-case holdout is project-authored rather than an external benchmark, and C30 exposed
+a policy/label specification ambiguity that is documented rather than retroactively relabelled.
 Real documents may introduce OCR errors, layout variation, incomplete fields, policy-version
 conflicts and organisation-specific wording.
