@@ -58,8 +58,11 @@ retrieved policy IDs and cost.
 - Direct-model missed the predefined high-severity recall target on both splits.
 - Full-context was accurate but used more input context because all policies were sent on
   every request.
-- RAG-hybrid preserved 100% high-severity recall while reducing input context, but produced
-  one holdout false positive on C30.
+- RAG-hybrid preserved 100% high-severity recall while reducing input context. Relative
+  to the frozen ground truth, it produced one holdout false positive on C30. C30 also
+  exposed a specification ambiguity: the case was labelled PASS because a temperature
+  range was present in supporting fields, while policy P12 stated that the packing list
+  itself should contain the range. The frozen ground truth was kept unchanged.
 - Rule-only performed strongly on the structured synthetic checks but missed the free-text
   ambiguity case C24 in DEV.
 
@@ -67,4 +70,6 @@ retrieved policy IDs and cost.
 
 The holdout contains only six cases, so individual errors move percentages substantially.
 The synthetic dataset is designed for controlled comparison rather than production claims.
-The project also did not directly measure realised reviewer time saved or business loss avoided.
+C30 also shows that policy wording, case schema and label definitions should be aligned
+more explicitly before future evaluations. The project did not directly measure realised
+reviewer time saved or business loss avoided.
