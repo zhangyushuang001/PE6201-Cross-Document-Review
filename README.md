@@ -37,39 +37,37 @@ The review returns structured JSON containing:
 
 ### High-level architecture
 
+The formal experiment evaluates four approaches separately. Based on those results,
+the proposed deployment is a layered workflow:
+
 ```text
 Documents + Supporting Fields
             |
-            v
-+---------------------------+
-| Deterministic checks      |
-| for stable structured     |
-| comparisons and thresholds|
-+---------------------------+
-            |
-            +------------------------------+
-            |                              |
-            v                              v
- Observable-fact routing            Semantic retrieval
-            |                              |
-            +-------------+----------------+
-                          |
-                          v
-                 Top-5 relevant policies
-                          |
-                          v
-                    GPT-5.6 Luna
-                          |
-                          v
-         Structured issues + evidence + policy ID
-                          |
-                          v
-                PASS / HUMAN_REVIEW
+            +-------------------------------+
+            |                               |
+            v                               v
+ Deterministic checks                 RAG-hybrid review
+ for stable structured                observable-fact routing
+ comparisons and thresholds           + semantic retrieval
+                                            |
+                                            v
+                                   Top-5 relevant policies
+                                            |
+                                            v
+                                      GPT-5.6 Luna
+            |                               |
+            +---------------+---------------+
+                            |
+                            v
+           Structured issues + evidence + policy ID
+                            |
+                            v
+                  PASS / HUMAN_REVIEW
 ```
 
-The repository also contains three comparison arms: rule-only, direct-model and
-full-context. The RAG-hybrid arm is the retrieval-grounded model arm used to test
-whether relevant policy selection can preserve recall while reducing context.
+The repository contains four formal comparison arms: rule-only, direct-model,
+full-context and RAG-hybrid. Their predictions were evaluated independently; rule-only
+predictions were not merged into the RAG-hybrid arm.
 
 ### Metrics targeted
 - High-severity issue recall **>= 90%**
@@ -125,8 +123,11 @@ Key observations:
   were sent on every request.
 - RAG-hybrid preserved 100% high-severity recall on both DEV and HOLDOUT while using
   less policy context than Full-context.
-- RAG-hybrid was not error-free: C30 produced one holdout false positive and was routed
-  to HUMAN_REVIEW.
+- Relative to the frozen ground truth, RAG-hybrid produced one holdout false positive
+  on C30 and routed it to HUMAN_REVIEW. C30 also exposed a specification ambiguity:
+  the case was designed as a clean negative with a temperature range in supporting fields,
+  while policy P12 stated that the packing list itself should contain that range. The frozen
+  ground truth was kept unchanged rather than relabelled after formal testing.
 - Rule-only performed strongly on the synthetic structured checks but missed the DEV
   free-text ambiguity case C24.
 
