@@ -62,12 +62,20 @@ Documents + Supporting Fields
            Structured issues + evidence + policy ID
                             |
                             v
+                 Schema / output validation
+                            |
+                            v
+             Deterministic routing gate
+                            |
+                            v
                   PASS / HUMAN_REVIEW
 ```
 
 The repository contains four formal comparison arms: rule-only, direct-model,
 full-context and RAG-hybrid. Their predictions were evaluated independently; rule-only
-predictions were not merged into the RAG-hybrid arm.
+predictions were not merged into the RAG-hybrid arm. The deterministic routing gate
+shown above is a proposed deployment improvement identified after the frozen formal run;
+the archived formal outputs were not retroactively changed.
 
 ### Metrics targeted
 - High-severity issue recall **>= 90%**
@@ -81,6 +89,8 @@ predictions were not merged into the RAG-hybrid arm.
 - RAG-hybrid HOLDOUT overall issue recall: **100%**
 - RAG-hybrid HOLDOUT precision: **90%**
 - RAG-hybrid HOLDOUT false flags per case: **0.167**
+- RAG-hybrid DEV decision accuracy: **95.83%**
+- RAG-hybrid HOLDOUT decision accuracy: **83.33%**
 - Direct-model missed the high-severity recall target on both DEV (**88.89%**)
   and HOLDOUT (**85.71%**)
 
@@ -106,6 +116,9 @@ See `data/README.md` for the dataset explanation and
   - HOLDOUT: C25-C30
 - Ground truth was frozen before formal testing.
 - The holdout configuration was not tuned after seeing holdout results.
+- Formal token-cost calculations use the fixed notebook assumptions of
+  **$0.20 per million input tokens** and **$1.20 per million output tokens**.
+  These are experiment assumptions and should be repriced for any later deployment.
 
 ## Formal results
 
@@ -128,6 +141,10 @@ Key observations:
   the case was designed as a clean negative with a temperature range in supporting fields,
   while policy P12 stated that the packing list itself should contain that range. The frozen
   ground truth was kept unchanged rather than relabelled after formal testing.
+- DEV case C18 exposed a separate routing failure: RAG-hybrid correctly detected
+  `missing_weight_field` but returned `PASS`. This is why DEV issue precision/recall can
+  be 100% while decision accuracy is 95.83%. The proposed deployment therefore adds a
+  deterministic post-validation gate so any validated issue routes to `HUMAN_REVIEW`.
 - Rule-only performed strongly on the synthetic structured checks but missed the DEV
   free-text ambiguity case C24.
 
@@ -176,9 +193,11 @@ The HOLDOUT notebook makes 6 x 3 = 18 model calls.
 
 ## Responsible-use boundary
 
-The prototype is intended for pre-shipment decision support. Outputs that indicate
-issues or ambiguity are routed to `HUMAN_REVIEW`. The evaluation uses synthetic data,
-so results should not be interpreted as production performance on real trade documents.
+The prototype is intended for pre-shipment decision support. In the proposed deployment,
+validated issues or ambiguity are routed to `HUMAN_REVIEW` through a deterministic
+post-processing gate; this gate is an improvement identified from the frozen C18 result
+and was not added retroactively to the formal experiment. The evaluation uses synthetic
+data, so results should not be interpreted as production performance on real trade documents.
 
 ## Reproducibility note
 
