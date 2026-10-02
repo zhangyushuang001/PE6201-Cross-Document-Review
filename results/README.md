@@ -27,6 +27,9 @@ token usage, cost, latency and schema-error count.
 - HOLDOUT: C25-C30
 - Ground truth was loaded for scoring after predictions were generated.
 - The holdout configuration was not tuned after holdout results were observed.
+- Formal cost calculations use fixed notebook assumptions of **$0.20/M input tokens**
+  and **$1.20/M output tokens**; these values are part of the archived experiment and
+  are not presented as permanent/current provider pricing.
 
 ## Output files
 
@@ -44,6 +47,15 @@ The summary CSVs contain arm-level metrics. The detail CSVs show case-level expe
 predicted issue sets. The raw JSON files preserve model outputs, token counts, latency,
 retrieved policy IDs and cost.
 
+### Case-level `success` definition
+
+The `success` column is the experiment's predefined primary case-level criterion. A case
+counts as successful when all expected HIGH-severity issues are found, false flags are
+no more than one, and there is no schema error. It **does not require the final
+PASS/HUMAN_REVIEW decision to match**. Decision accuracy is therefore reported separately.
+This explains, for example, why C30 can have `success=True` while its decision differs
+from the frozen ground truth.
+
 ## Key formal results
 
 | Approach | DEV high-severity recall | HOLDOUT high-severity recall | HOLDOUT precision | HOLDOUT false flags/case |
@@ -52,6 +64,10 @@ retrieved policy IDs and cost.
 | Direct-model | 88.89% | 85.71% | 77.78% | 0.333 |
 | Full-context | 100.00% | 100.00% | 100.00% | 0.000 |
 | RAG-hybrid | 100.00% | 100.00% | 90.00% | 0.167 |
+
+Additional RAG-hybrid decision accuracy:
+- DEV: **95.83%**
+- HOLDOUT: **83.33%**
 
 ## Interpreting the metrics
 
@@ -63,6 +79,10 @@ retrieved policy IDs and cost.
   exposed a specification ambiguity: the case was labelled PASS because a temperature
   range was present in supporting fields, while policy P12 stated that the packing list
   itself should contain the range. The frozen ground truth was kept unchanged.
+- DEV case C18 shows a routing error that issue-level metrics alone can hide:
+  RAG-hybrid correctly detected `missing_weight_field` but returned `PASS`. The archived
+  result is unchanged; the proposed deployment adds a deterministic post-validation gate
+  so any validated issue routes to `HUMAN_REVIEW`.
 - Rule-only performed strongly on the structured synthetic checks but missed the free-text
   ambiguity case C24 in DEV.
 
